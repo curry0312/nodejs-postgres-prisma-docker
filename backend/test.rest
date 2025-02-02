@@ -1,0 +1,58 @@
+### html page ###
+GET http://localhost:8383/
+
+
+### register ###
+POST  http://localhost:8383/api/auth/register
+Content-Type: application/json
+
+{
+     "username":"Eric Wang", 
+     "password":"curry1357911"
+}
+
+
+### login ###
+POST http://localhost:8383/api/auth/login
+Content-Type: application/json
+
+{
+     "username":"Eric Wang", 
+     "password":"curry1357911"
+}
+
+
+
+### GET todos ###
+GET http://localhost:8383/api/todos/
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4Mzk4OTA5fQ.KYgUsjv0Zkg0nGPlZCJjl0tuMn8qOS92laUByRIl6Mk
+
+
+###
+
+
+### POST todo ###
+POST http://localhost:8383/api/todos/
+Content-Type: application/json
+Authorization:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4Mzk4OTA5fQ.KYgUsjv0Zkg0nGPlZCJjl0tuMn8qOS92laUByRIl6Mk
+
+{
+     "task": "Washing dishes 4"
+}
+
+###
+
+### PUT todo ###
+PUT http://localhost:8383/api/todos/2
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4Mzk4OTA5fQ.KYgUsjv0Zkg0nGPlZCJjl0tuMn8qOS92laUByRIl6Mk
+
+{
+     "completed": true
+}
+
+
+### DELETE todo ###
+DELETE http://localhost:8383/api/todos/3
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzM4Mzk4OTA5fQ.KYgUsjv0Zkg0nGPlZCJjl0tuMn8qOS92laUByRIl6Mk
